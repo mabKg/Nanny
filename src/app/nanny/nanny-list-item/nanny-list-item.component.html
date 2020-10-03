@@ -1,6 +1,6 @@
-<a routerLink="/nanny/{{currentNanny.id}}">
+<a routerLink="/nanny/{{currentNanny._id}}">
 <div class="card bwm-card">
-  <img class="card-img-top" src="http://via.placeholder.com/350x250" alt="">
+  <img class="card-img-top" src="{{currentNanny.image}}" alt="">
   <div class="card-block">
     <h6 class="card-subtitle">{{currentNanny.province}}&#183; {{currentNanny.city}}&#183; {{currentNanny.age}} years</h6>
     <h4 class="card-title">{{currentNanny.hobbies}}</h4>

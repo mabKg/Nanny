@@ -1,4 +1,61 @@
-<div *ngIf="currentNanny">
+<section id="nannyDetails" *ngIf="currentNanny">
+    <div class="upper-section">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{{currentNanny.image}}" alt="">
+        </div>
+        <div class="col-md-6">
+         
+          <img src="{{currentNanny.image}}" alt="">
+        </div>
+      </div>
+    </div> 
+  
+    <div class="details-section">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="nanny">
+            <h4 class="nanny-city"> {{currentNanny.rate | currency:'R':true }} <small>per hour </small> - {{currentNanny.type }}</h4>
+            <h5 class="nanny-names">{{currentNanny.firstName | ucwords}} {{currentNanny.lastName }}</h5>
+            <h5 class="nanny-names">{{currentNanny.age}}  - {{currentNanny.gender}}</h5>
+            <h5 class="nanny-names">{{currentNanny.cell}} - {{currentNanny.email}}</h5>
+            <h5 class="nanny-names">{{currentNanny.province}} - {{currentNanny.city}}</h5>
+            <h5 class="nanny-names">{{currentNanny.health}} - {{currentNanny.hobbies}}</h5>
+            <hr>
+            <h3 class="title">Qualification and Experience</h3>
+            <h5 class="nanny-names">{{currentNanny.qualification}} </h5>
+            <h5 class="nanny-names">{{currentNanny.yearsOfExperience}} year/s with {{currentNanny.kidsAges}}</h5>
+            <hr>
+            <h3 class="title">Reference</h3>
+            <h5 class="nanny-names">{{currentNanny.referenceName}} - {{currentNanny.referenceNumber}}</h5>
+           
+            <p class="nanny-description">
+              
+            </p>
+            <hr>
+            <div class="rental-assets">
+              <h3 class="title">Skills</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <span><i class="fa fa-asterisk"></i> {{currentNanny.rate }}</span>
+                  <span><i class="fa fa-thermometer"></i> cooking</span>
+                  <span><i class="fa fa-location-arrow"></i> Ironing</span>
+                </div>
+                <div class="col-md-6">
+                  <span><i class="fa fa-desktop"></i> {{currentNanny.type }}</span>
+                  <span><i class="fa fa-cube"></i> Washing machine</span>
+                  <span><i class="fa fa-cube"></i> Dishwasher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"> BOOKING</div>
+      </div>
+    </div>
+  </section>
+  
+<!-- <div *ngIf="currentNanny">
 <p> {{currentNanny.id}}</p>
 <p>{{currentNanny.firstName}}</p>
 <p>{{currentNanny.lastName }}</p>
@@ -14,4 +71,5 @@
 <p>{{currentNanny.qualification }}</p>
 <p>{{currentNanny.church }}</p>
 <p>{{currentNanny.criminalRecord }}</p>
-</div>
+</div> -->
+
