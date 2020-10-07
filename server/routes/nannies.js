@@ -2,6 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Nanny = require('../models/nanny');
 
+const UserCtrl = require('../controllers/user');
+
+router.get('/secret',UserCtrl.authMiddleware, function(req, res) {
+    res.json({"secret": true});
+});
+
 router.get('', function(req, res) {
     Nanny.find({}, function(err, foundNannies) {
         res.json(foundNannies);

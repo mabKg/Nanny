@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule } from 'ngx-pipes';
+import { MapModule } from '../common/map/map.module';
 
 import { NannyComponent } from './nanny.component';
 import { NannyListComponent } from './nanny-list/nanny-list.component';
@@ -28,7 +29,10 @@ children: [
     UppercasePipe,
   ],
   imports: [
-    CommonModule,HttpClientModule,NgPipesModule,
+    CommonModule,
+    HttpClientModule,
+    NgPipesModule,
+    MapModule,
     RouterModule.forChild(routes)
   ],
   providers: [NannyService]
