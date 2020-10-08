@@ -8,25 +8,30 @@
 
   .card-block {
     padding-top: 8px;
+  }
 
+  .card-body{
+    background-color: hsl(60, 30%, 95%);
   }
     .card-subtitle {
       margin: 0;
       font-weight: 500;
       font-size: 12px;
       text-transform: uppercase;
-      color: #16861a;
+      color: #000;
     }
 
-
+p .card-text{
+  color: #000;
+}
 
 
     .card-title {
       font-size: 19px;
       margin: 3px 0;
+      color: #e68f5c;
     }
-
-
+   
     .card-text {
       font-size: 14px;
       font-weight: 300;
@@ -34,3 +39,10 @@
       margin-bottom: 0;
     }
 
+    .card-footer{
+      background-color:#e0a07b;
+    }
+
+    .card-footer a {
+      color: #fff;
+    }
