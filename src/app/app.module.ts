@@ -7,10 +7,12 @@ import { HeaderComponent } from './common/header/header.component';
 
 import { NannyComponent } from './nanny/nanny.component';
 import { TestComponent } from './test/test.component';
+import { SearchNannyComponent } from './common/header/search-nanny/search-nanny.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/nanny', pathMatch: 'full'},
+  {path: 'search', component: SearchNannyComponent},
   {path: 'test', component: TestComponent}
 ]
 
@@ -19,6 +21,7 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     TestComponent,
+    SearchNannyComponent,
    
 
 

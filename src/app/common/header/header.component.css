@@ -1,4 +1,13 @@
-/* @import '_variables'; */
+.navbar {
+  background-color: #e68f5c;
+}
+.navbar-brand{
+  color: #fff;
+}
+.nav-item a {
+  color: #fff;
+}
+/* @import '_variables';
 
 .navbar {
   padding: 20px;
@@ -30,7 +39,7 @@
     color: #F44336;
 
   }
-
+ */
 
 
 

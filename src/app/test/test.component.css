@@ -1,3 +1,15 @@
+.navbar {
+  background-color: #e68f5c;
+}
+.navbar-brand{
+  color: #fff;
+}
+.nav-item a {
+  color: #fff;
+}
+.jumbotron {
+  background-color: #fff;
+}
 fieldset {
     margin: 0;
     padding: 0;
@@ -9,10 +21,12 @@ fieldset {
     margin: 0;
     padding: 0;
     display: block;
-   
+  
   }
   
-  
+  strong {
+    color: black;
+  }
   
   
   
@@ -47,7 +61,7 @@ fieldset {
   }
   
   .s002 form .inner-form {
-    background: rgba(201, 150, 12, 0.5);
+    background-color: #e68f5c;
     padding: 16px;
     display: -ms-flexbox;
     display: flex;
@@ -126,7 +140,7 @@ fieldset {
   .s002 form .inner-form .input-field.fifth-wrap .btn-search {
     height: 70px;
     width: 100%;
-    background: #b78a62;
+    background:  #e0a07b;
     white-space: nowrap;
     border-radius: .5px;
     font-size: 20px;
@@ -141,7 +155,16 @@ fieldset {
   .s002 form .inner-form .input-field.fifth-wrap .btn-search:hover {
     background: #af7d51;
   }
+
   
+  
+  .card-footer{
+    background-color:#e0a07b;
+  }
+
+  .py-5{
+    background-color: #e68f5c;
+  }
   @media screen and (max-width: 992px) {
     .s002 form legend {
       font-size: 50px;

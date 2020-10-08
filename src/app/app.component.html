@@ -3,5 +3,8 @@
 <app-header></app-header>
 
 <div class="container">
+  <div *ngIf="_router.url == '/nanny'">
+    <app-search-nanny></app-search-nanny>
+  </div>
   <router-outlet></router-outlet>
 </div>
