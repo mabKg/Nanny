@@ -6,15 +6,20 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 
 import { NannyComponent } from './nanny/nanny.component';
+import { TestComponent } from './test/test.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/nanny', pathMatch: 'full'},
+  {path: 'test', component: TestComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    TestComponent,
+   
 
 
   ],

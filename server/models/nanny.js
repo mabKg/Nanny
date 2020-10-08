@@ -12,6 +12,7 @@ gender: { type: String, required: true},
 cell: { type: String, required: true, max: [10, 'too long, max is 10 characters']},
 email: { type: String, required: true, max: [128, 'too long, max is 128 characters']},
 city: { type: String, required: true, lowercase: true},
+streetName: { type: String, required: true, lowercase: true},
 province: { type: String, required: true, lowercase: true},
 hobbies: { type: String, required: true},
 type: { type: String, required: true},
@@ -26,6 +27,7 @@ kidsAges: { type: String, required: true},
 referenceName: { type: String, required: true},
 referenceNumber: { type: String, required: true},
 createdAt: { type: Date, default: Date.now },
+// user: { type: Schema.Types.ObjectId, ref: 'User' }
 });
 
 module.exports = mongoose.model('Nanny', nannySchema);

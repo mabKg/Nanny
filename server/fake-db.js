@@ -1,6 +1,6 @@
 
 const Nanny = require('./models/nanny');
-
+const User = require('./models/user');
 class FakeDb {
     constructor() {
         this.Nannies = [{
@@ -13,6 +13,7 @@ class FakeDb {
     cell: '08376473778',
     email: 'mab@gmail.com',
     city: 'johannesburg',
+    streetName: 'Commissioner',
     province: 'Gauteng',
     hobbies: 'i like playing with kids',
     type: 'stay In',
@@ -37,6 +38,7 @@ class FakeDb {
         cell: '08376473778',
         email: 'mab@gmail.com',
         city: 'johannesburg',
+        streetName: 'Commissioner',
         province: 'Gauteng',
         hobbies: 'i like playing with kids',
         type: 'stay In',
@@ -51,23 +53,36 @@ class FakeDb {
         referenceName: 'mabatho',
         referenceNumber: '0845677877',
         createdAt: '02-04-2020'
-            },]
+            }];
+
+            this.users = [{
+                username: "Test User",
+                email: "test@gmail.com",
+                password: "testtest"
+            }];
     }
 
     async cleanDb(){
+        await User.deleteMany({});
        await Nanny.deleteMany({});
+       
     }
-    pushNannyToDb() {
+    pushDataToDb() {
+        const user = new User(this.users[0]);
+
         this.Nannies.forEach((nanny) => {
             const newNanny = new Nanny(nanny);
+            newNanny.user = user;
 
+            user.Nannies.push(newNanny);
             newNanny.save();
-        })
+        });
+        user.save();
     }
 
-    seedDb() {
-        this.cleanDb();
-        this.pushNannyToDb();
+   async seedDb() {
+       await this.cleanDb();
+        this.pushDataToDb();
     }
 }
 

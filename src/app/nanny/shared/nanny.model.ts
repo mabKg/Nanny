@@ -9,6 +9,7 @@ gender: string;
 cell: string;
 email: string;
 city: string;
+streetName: string;
 province: string;
 hobbies: string;
 type: string;
