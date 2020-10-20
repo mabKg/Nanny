@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { schema } = require('./booking');
 const Schema = mongoose.Schema;
 
 const nannySchema = new Schema({
@@ -27,7 +28,8 @@ kidsAges: { type: String, required: true},
 referenceName: { type: String, required: true},
 referenceNumber: { type: String, required: true},
 createdAt: { type: Date, default: Date.now },
-// user: { type: Schema.Types.ObjectId, ref: 'User' }
+ user: { type: Schema.Types.ObjectId, ref: 'User' },
+ bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }]
 });
 
 module.exports = mongoose.model('Nanny', nannySchema);

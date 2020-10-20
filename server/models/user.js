@@ -24,8 +24,8 @@ password: {
     max: [32, 'too long, max is 32 characters'],
     required: 'password is required'
 },
-Nannies: [{type: Schema.Types.ObjectId, ref: 'Nanny'}]
-
+Nannies: [{type: Schema.Types.ObjectId, ref: 'Nanny'}],
+bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }]
 
 });
 
