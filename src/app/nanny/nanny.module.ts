@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgPipesModule } from 'ngx-pipes';
 import { MapModule } from '../common/map/map.module';
 import { Daterangepicker } from 'ng2-daterangepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NannyComponent } from './nanny.component';
 import { NannyListComponent } from './nanny-list/nanny-list.component';
@@ -12,7 +13,8 @@ import { NannyListItemComponent } from './nanny-list-item/nanny-list-item.compon
 import { NannyService } from './shared/nanny.service';
 import { NannyDetailComponent } from './nanny-detail/nanny-detail.component';
 import { UppercasePipe } from '../common/header/pipes/uppercase.pipe';
-
+import { HelperService } from '../common/service/helper.service';
+import { BookingService } from '../booking/booking.service';
 import { AuthGuard } from '../auth/shared/auth.guard';
 import { NannyDetailBookingComponent } from './nanny-detail/nanny-detail-booking/nanny-detail-booking.component';
 
@@ -40,9 +42,15 @@ children: [
     NgPipesModule,
     MapModule,
     Daterangepicker,
+    FormsModule,
+     ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],
-  providers: [NannyService]
+  providers: [
+    NannyService,
+    HelperService,
+    BookingService
+  ]
 })
 
 export class NannyModule {}

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NannyModule } from './nanny/nanny.module';
 import { AuthModule } from './auth/auth.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+ 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { TestComponent } from './test/test.component';
@@ -23,16 +24,14 @@ const routes: Routes = [
     HeaderComponent,
     TestComponent,
     SearchNannyComponent,
-   
-   
-
-
-  ],
+   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
     NannyModule,
-    AuthModule
+    AuthModule,
+    NgbModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

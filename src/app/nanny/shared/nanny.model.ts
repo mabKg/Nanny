@@ -1,3 +1,5 @@
+import { Booking } from 'src/app/booking/booking.model';
+
 export class Nanny {
 _id: string;
 firstName: string;
@@ -24,6 +26,7 @@ kidsAges: string;
 referenceName: string;
 referenceNumber: string;
 createdAt: string;
+bookings: Booking[]
 }
 
 

@@ -1,5 +1,11 @@
 
+.daterangePicker td .active{
+  background-color: hotpink;
+}
 
+.daterangePicker td .hover{
+  background-color: rgb(105, 255, 130);
+}
 .booking {
   padding: 20px;
   border: 1px solid grey;
