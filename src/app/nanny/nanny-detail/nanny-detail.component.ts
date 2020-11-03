@@ -11,7 +11,7 @@ import { Nanny } from '../shared/nanny.model';
 export class NannyDetailComponent implements OnInit {
 
 
-currentNanny: Nanny;
+nanny: Nanny;
   constructor(private route: ActivatedRoute, private nannyService: NannyService, ) { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ currentNanny: Nanny;
   getNanny(nannyId: string) {
     this.nannyService.getNannyById(nannyId).subscribe(
       (nanny: Nanny) => {
-this.currentNanny = nanny;
+this.nanny = nanny;
       }
     )
   }

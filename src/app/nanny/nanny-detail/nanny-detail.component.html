@@ -1,12 +1,12 @@
-<section id="nannyDetails" *ngIf="currentNanny">
+<section id="nannyDetails" *ngIf="nanny">
     <div class="upper-section">
       <div class="row">
         <div class="col-md-6">
-          <img src="{{currentNanny.image}}" alt="">
+          <img src="{{nanny.image}}" alt="">
         </div>
         <div class="col-md-6">
          
-        <app-map [location]="currentNanny.city + ', ' + currentNanny.streetName"></app-map>
+        <app-map [location]="nanny.city + ', ' + nanny.streetName"></app-map>
         </div>
       </div>
     </div> 
@@ -15,19 +15,19 @@
       <div class="row">
         <div class="col-md-6">
           <div class="nanny">
-            <h4 class="nanny-city"> {{currentNanny.rate | currency:'R':true }} <small>per hour </small> - {{currentNanny.type }}</h4>
-            <h5 class="nanny-names">{{currentNanny.firstName | ucwords}} {{currentNanny.lastName }}</h5>
-            <h5 class="nanny-names">{{currentNanny.age}}  - {{currentNanny.gender}}</h5>
-            <h5 class="nanny-names">{{currentNanny.cell}} - {{currentNanny.email}}</h5>
-            <h5 class="nanny-names">{{currentNanny.province}} - {{currentNanny.city}}</h5>
-            <h5 class="nanny-names">{{currentNanny.health}} - {{currentNanny.hobbies}}</h5>
+            <h4 class="nanny-city"> {{nanny.rate | currency:'R':true }} <small>per hour </small> - {{nanny.type }}</h4>
+            <h5 class="nanny-names">{{nanny.firstName | ucwords}} {{nanny.lastName }}</h5>
+            <h5 class="nanny-names">{{nanny.age}}  - {{nanny.gender}}</h5>
+            <h5 class="nanny-names">{{nanny.cell}} - {{nanny.email}}</h5>
+            <h5 class="nanny-names">{{nanny.province}} - {{nanny.city}}</h5>
+            <h5 class="nanny-names">{{nanny.health}} - {{nanny.hobbies}}</h5>
             <hr>
             <h3 class="title">Qualification and Experience</h3>
-            <h5 class="nanny-names">{{currentNanny.qualification}} </h5>
-            <h5 class="nanny-names">{{currentNanny.yearsOfExperience}} year/s with {{currentNanny.kidsAges}}</h5>
+            <h5 class="nanny-names">{{nanny.qualification}} </h5>
+            <h5 class="nanny-names">{{nanny.yearsOfExperience}} year/s with {{nanny.kidsAges}}</h5>
             <hr>
             <h3 class="title">Reference</h3>
-            <h5 class="nanny-names">{{currentNanny.referenceName}} - {{currentNanny.referenceNumber}}</h5>
+            <h5 class="nanny-names">{{nanny.referenceName}} - {{nanny.referenceNumber}}</h5>
            
             <p class="nanny-description">
               
@@ -37,12 +37,12 @@
               <h3 class="title">Skills</h3>
               <div class="row">
                 <div class="col-md-6">
-                  <span><i class="fa fa-asterisk"></i> {{currentNanny.rate }}</span>
+                  <span><i class="fa fa-asterisk"></i> {{nanny.rate }}</span>
                   <span><i class="fa fa-thermometer"></i> cooking</span>
                   <span><i class="fa fa-location-arrow"></i> Ironing</span>
                 </div>
                 <div class="col-md-6">
-                  <span><i class="fa fa-desktop"></i> {{currentNanny.type }}</span>
+                  <span><i class="fa fa-desktop"></i> {{nanny.type }}</span>
                   <span><i class="fa fa-cube"></i> Washing machine</span>
                   <span><i class="fa fa-cube"></i> Dishwasher</span>
                 </div>
@@ -51,27 +51,29 @@
           </div>
         </div>
         <div class="col-md-6"> 
-          <app-nanny-detail-booking [price]="currentNanny.rate"></app-nanny-detail-booking>
+          <app-nanny-detail-booking 
+          [nanny]="nanny">
+        </app-nanny-detail-booking>
         </div>
       </div>
     </div>
   </section>
   
-<!-- <div *ngIf="currentNanny">
-<p> {{currentNanny.id}}</p>
-<p>{{currentNanny.firstName}}</p>
-<p>{{currentNanny.lastName }}</p>
-<p>{{currentNanny.age }}</p>
-<p>{{currentNanny.idNumber }}</p>
-<p>{{currentNanny.cell }}</p>
-<p>{{currentNanny.email }}</p>
-<p>{{currentNanny.gender }}</p>
-<p>{{currentNanny.health }}</p>
-<p>{{currentNanny.city }}</p>
-<p>{{currentNanny.hobbies }}</p>
-<p>{{ currentNanny.province}}</p>
-<p>{{currentNanny.qualification }}</p>
-<p>{{currentNanny.church }}</p>
-<p>{{currentNanny.criminalRecord }}</p>
+<!-- <div *ngIf="nanny">
+<p> {{nanny.id}}</p>
+<p>{{nanny.firstName}}</p>
+<p>{{nanny.lastName }}</p>
+<p>{{nanny.age }}</p>
+<p>{{nanny.idNumber }}</p>
+<p>{{nanny.cell }}</p>
+<p>{{nanny.email }}</p>
+<p>{{nanny.gender }}</p>
+<p>{{nanny.health }}</p>
+<p>{{nanny.city }}</p>
+<p>{{nanny.hobbies }}</p>
+<p>{{ nanny.province}}</p>
+<p>{{nanny.qualification }}</p>
+<p>{{nanny.church }}</p>
+<p>{{nanny.criminalRecord }}</p>
 </div> -->
 
