@@ -9,15 +9,18 @@
               <div class="icon-wrap">
                 
               </div>
-              <input id="search" type="text" placeholder="What are you looking for?" />
+              <input #nannySearch
+               id="search" type="text" placeholder="What are you looking for?" />
             </div>
            
-           
+          
            
             <div class="input-field fifth-wrap">
-              <button class="btn-search" type="button">SEARCH</button>
+              <button (click)="search(nannySearch.value)"
+               class="btn-search" type="button">SEARCH</button>
             </div>
           </div>
         </form>
       </div>
 </header>
+

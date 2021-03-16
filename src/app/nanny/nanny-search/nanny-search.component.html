@@ -1,0 +1,18 @@
+<section id="nannyListing">
+    
+    <h1 *ngIf="nanny.length > 0" class="title">Your Nanny in  {{ city | ucwords}} </h1>
+    <h1 *ngIf="errors.length > 0" class="title">
+        <p *ngFor = "let error of errors" > 
+          {{error.detail}}
+        </p>
+    </h1>
+    <div class="row">
+      <div class='col-md-3 col-xs-6' *ngFor="let nanny of nanny">
+        
+        <app-nanny-list-item [currentNanny]="nanny"></app-nanny-list-item>
+      </div>
+  
+  
+    </div>
+  </section>
+  

@@ -12,18 +12,24 @@ import { NannyListComponent } from './nanny-list/nanny-list.component';
 import { NannyListItemComponent } from './nanny-list-item/nanny-list-item.component';
 import { NannyService } from './shared/nanny.service';
 import { NannyDetailComponent } from './nanny-detail/nanny-detail.component';
+import { NannyDetailBookingComponent } from './nanny-detail/nanny-detail-booking/nanny-detail-booking.component';
+import { NannySearchComponent } from './nanny-search/nanny-search.component';
+
 import { UppercasePipe } from '../common/header/pipes/uppercase.pipe';
 import { HelperService } from '../common/service/helper.service';
 import { BookingService } from '../booking/booking.service';
 import { AuthGuard } from '../auth/shared/auth.guard';
-import { NannyDetailBookingComponent } from './nanny-detail/nanny-detail-booking/nanny-detail-booking.component';
+import { NannyCreateComponent } from './nanny-create/nanny-create.component';
+
 
 const routes: Routes = [
   { path: 'nanny',
 component: NannyComponent,
 children: [
   { path: '', component: NannyListComponent },
-  { path: ':nannyId', component: NannyDetailComponent, canActivate: [AuthGuard]}
+  { path: 'new', component: NannyCreateComponent},
+  { path: ':nannyId', component: NannyDetailComponent, canActivate: [AuthGuard]},
+  { path: ':city/nanny', component: NannySearchComponent}
 ]}
 ]
 
@@ -35,6 +41,8 @@ children: [
     NannyDetailComponent,
     UppercasePipe,
     NannyDetailBookingComponent,
+    NannySearchComponent,
+    NannyCreateComponent,
   ],
   imports: [
     CommonModule,

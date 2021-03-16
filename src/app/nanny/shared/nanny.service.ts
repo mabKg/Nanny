@@ -13,4 +13,8 @@ public getNannyById(nannyId: string): Observable<any> {
   public getNanny(): Observable<any> {
    return this.http.get('/api/v1/nannies')
 }
+
+public getNannyByCity(city: string): Observable<any> {
+  return this.http.get(`/api/v1/nannies?city=${city}`);
+}
 }

@@ -1,0 +1,180 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text"
+           class="form-control"
+           id="firstName"
+           formControlName="firstName" >
+         </div>
+  
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text"
+           class="form-control"
+           id="lastName"
+           formControlName="lastName" >
+  </div>
+  <div class="form-group">
+    <label for="idNumber">Id Number</label>
+    <input type="text"
+           class="form-control"
+           id="idNumber"
+           formControlName="idNumber" >
+  </div>
+  <div class="form-group">
+  <div *ngFor="let type of Type; let i=index">
+    <label>
+      <input type="checkbox" [value]="type.value" (change)="onCheckboxChange($event)" />
+      {{type.value}}
+    </label>
+  </div>
+</div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="file"
+           class="form-control"
+           id="image"
+           formControlName="image" >
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text"
+           class="form-control"
+           id="age"
+           formControlName="age" >
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <div>
+      <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+      <label for="male">Male</label>
+   </div>
+
+   <div>
+      <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+      <label for="female">Female</label>
+   </div>
+  </div>
+  <div class="form-group">
+    <label for="cell">Cell</label>
+    <input type="text"
+           class="form-control"
+           id="cell"
+           formControlName="cell" >
+  </div>
+  <div class="form-group">
+    <label for="streetName">Street Name</label>
+    <input type="text"
+           class="form-control"
+           id="streetName"
+           formControlName="streetName" >
+  </div>
+  <div class="form-group">
+    <select formControlName="city">
+      <option value="">Choose your city</option>
+      <option *ngFor="let city of cities" [value]="city.name">
+        {{ city.name }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <select formControlName="province">
+      <option value="">Choose your Province</option>
+      <option *ngFor="let province of provinces" [value]="province.name">
+        {{ province.name }}
+      </option>
+    </select>
+  </div>
+ 
+  <div class="form-group">
+    <label for="hobbies">Hobbies</label>
+    <textarea rows="5"
+                        type="text"
+                        class="form-control"
+           id="hobbies"
+           formControlName="hobbies" >
+          </textarea>
+  </div>
+  <div class="form-group">
+    <label for="rate">Rate</label>
+    <input type="text"
+           class="form-control"
+           id="rate"
+           formControlName="rate" >
+  </div>
+ 
+  <div class="form-group">
+    <label for="health">Health:</label>
+    <div>
+      <input id="good" type="radio" value="good" name="health" formControlName="health">
+      <label for="male">Good</label>
+   </div>
+
+   <div>
+      <input id="not-good" type="radio" value="not-good" name="health" formControlName="health">
+      <label for="female">Not Good</label>
+   </div>
+  </div>
+  <div class="form-group">
+    <label for="church">Church</label>
+    <input type="text"
+           class="form-control"
+           id="church"
+           formControlName="church" >
+  </div>
+  <div class="form-group">
+  <div *ngFor="let qualification of Qualifications; let i=index">
+    <label>
+      <input type="checkbox" [value]="qualification.value" (change)="onCheckboxChange1($event)" />
+      {{qualification.value}}
+    </label>
+  </div>
+</div>
+<div class="form-group">
+  <label for="criminalRecord">Criminal Record</label>
+  <input type="text"
+         class="form-control"
+         id="criminalRecord"
+         formControlName="criminalRecord" >
+</div>
+<div class="form-group">
+  <label for="criminalDescription">Criminal Description</label>
+  <textarea rows="5"
+  type="text"
+  class="form-control"
+         id="criminalDescription"
+         formControlName="criminalDescription" >
+        </textarea>
+</div>
+<div class="form-group">
+  <label for="yearsOfExperience">Years Of Experience</label>
+  <input type="number"
+         class="form-control"
+         id="yearsOfExperience"
+         formControlName="yearsOfExperience" >
+</div>
+<div class="form-group">
+  <div *ngFor="let kidsAges of KidsAge; let i=index">
+    <label>
+      <input type="checkbox" [value]="kidsAges.value" (change)="onCheckboxChange2($event)" />
+      {{kidsAges.value}}
+    </label>
+  </div>
+</div>
+<div class="form-group">
+  <label for="referenceName">Reference Name</label>
+  <input type="text"
+         class="form-control"
+         id="referenceName"
+         formControlName="referenceName" >
+</div>
+<div class="form-group">
+  <label for="referenceNumber">Reference Number</label>
+  <input type="number"
+         class="form-control"
+         id="referenceNumber"
+         formControlName="referenceNumber" >
+</div>
+  <input type="submit" value="Submit">
+</form>

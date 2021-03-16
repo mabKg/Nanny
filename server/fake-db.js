@@ -1,6 +1,7 @@
 
 const Nanny = require('./models/nanny');
 const User = require('./models/user');
+const Booking = require('./models/booking');
 class FakeDb {
     constructor() {
         this.Nannies = [{
@@ -117,8 +118,9 @@ class FakeDb {
     }
 
     async cleanDb(){
-        await User.deleteMany({});
-       await Nanny.deleteMany({});
+        await User.remove({});
+       await Nanny.remove({});
+       await Booking.remove({})
        
     }
     pushDataToDb() {

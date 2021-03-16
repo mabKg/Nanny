@@ -13,17 +13,20 @@ import { RegisterComponent } from './register/register.component';
 import { AuthService } from './shared/auth.service';
 import { AuthGuard } from './shared/auth.guard';
 import { TokenInterceptor } from './shared/token.interceptor';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
-  {path: 'register', component: RegisterComponent, canActivate: [AuthGuard]}
+  {path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
+  {path: 'test', component: TestComponent},
 ]
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
-    AuthComponent
+    AuthComponent,
+    TestComponent
    
 ],
   imports: [

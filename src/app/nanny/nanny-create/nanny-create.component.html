@@ -1,0 +1,250 @@
+
+
+<section id="newNanny">
+    <div class="form">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="page-title">Create Rental</h1>
+          <form #nannyForm="ngForm">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text"
+              class="form-control"
+                     id="firstName"
+                     name="firstName"
+                     [(ngModel)]="newNanny.firstName"
+                     >
+            </div>
+  
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text"
+                     class="form-control"
+                     id="lastName"
+                     name="lastName"
+                     [(ngModel)]="newNanny.lastName">
+            </div>
+  
+            <div class="form-group">
+              <label for="idNumber">Id Number</label>
+              <input type="number"
+                     class="form-control"
+                     id="idNumber"
+                     name="idNumber"
+                     [(ngModel)]="newNanny.idNumber"
+                     >
+            </div>
+  
+            <div class="form-group">
+              <label for="type">Type</label>
+  
+              <select class="form-control"
+                      id="type" 
+                      name="type"
+                      [(ngModel)]="newNanny.type">
+                <option> Stay-In </option>
+                <option> Stay-Out </option>
+                <option> Part-Time </option>            </select>
+            </div>
+  
+            <div class="form-group">
+              <label for="image">Image</label>
+              <input type="file"
+                     name="image"
+                     class="form-control"
+                     id="image"
+                     placeholder="Upload file..."
+                     name="image"
+                     [(ngModel)]="newNanny.image">
+            </div>
+  
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input type="number"
+                     class="form-control"
+                     id="age"
+                     name="age"
+                      [(ngModel)]="newNanny.age">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gnder</label>
+    
+                <select class="form-control"
+                        id="gender"
+                        name="gender"
+                      [(ngModel)]="newNanny.gender">
+                  <option> female </option>
+                  <option> male </option>
+                             </select>
+              </div>
+  
+
+              <div class="form-group">
+                <label for="cell">Cell</label>
+                <input type="text"
+                       class="form-control"
+                       id="cell"
+                       name="cell"
+                      [(ngModel)]="newNanny.cell">
+              </div>
+
+              <div class="form-group">
+                <label for="streetName">Street Name</label>
+                <input type="text"
+                       class="form-control"
+                       id="streetName"
+                       name="streetName"
+                       [(ngModel)]="newNanny.streetName">
+              </div>
+
+              
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text"
+                       class="form-control"
+                       id="city"
+                       name="city"
+                       [(ngModel)]="newNanny.city">
+              </div>
+
+              
+              <div class="form-group">
+                <label for="province">province</label>
+                <input type="text"
+                       class="form-control"
+                       id="province"
+                       name="province"
+                       [(ngModel)]="newNanny.province">
+              </div>
+
+            <div class="form-group">
+              <label for="hobbies">hobbies</label>
+              <textarea rows="5"
+                        type="text"
+                        class="form-control"
+                        id="hobbies"
+                        name="hobbies"
+                       [(ngModel)]="newNanny.hobbies">
+              </textarea>
+            </div>
+  
+            <div class="form-group">
+              <label for="rate">Daily Rate</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Zar</div>
+                </div>
+                <input type="number"
+                       name="rate"
+                       class="form-control"
+                       id="rate"
+                       name="rate"
+                       [(ngModel)]="newNanny.rate">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label for="health">Health</label>
+    
+                <select class="form-control"
+                        id="health"
+                        name="health"
+                        [(ngModel)]="newNanny.health">
+                  <option> good </option>
+                  <option> not good </option>
+                             </select>
+              </div>
+
+              <div class="form-group">
+                <label for="church">Church</label>
+                <input type="text"
+                       class="form-control"
+                       id="church"
+                       name="church"
+                        [(ngModel)]="newNanny.church">
+              </div>
+  
+            <div class="form-group">
+              <label for="qualification">qualification</label>
+              <input type="checkbox" id="qualification" value="Child_care" name="qualification"
+              [(ngModel)]="newNanny.qualification">Child care<br>      
+        <input type="checkbox" id="qualification" value="CPR" name="qualification"
+        [(ngModel)]="newNanny.qualification">CPR<br>      
+        <input type="checkbox" id="qualification" value="others" name="qualification"
+        [(ngModel)]="newNanny.qualification">Others<br> 
+            </div>
+
+            <div class="form-group">
+                <label for="criminalRecord">criminalRecord</label>
+    
+                <select class="form-control"
+                        id="criminalRecord"
+                        name="criminalRecord"
+                        [(ngModel)]="newNanny.criminalRecord">
+                  <option> No </option>
+                  <option> Yes </option>
+                             </select>
+              </div>
+
+              <div class="form-group">
+                <label for="criminalDescription">criminalDescription</label>
+                <input type="text"
+                       class="form-control"
+                       id="criminalDescription"
+                       name="criminalDescription"
+                        [(ngModel)]="newNanny.criminalDescription">
+              </div>
+
+              <div class="form-group">
+                <label for="yearsOfExperience">Years Of Experience</label>
+                <input type="number"
+                       class="form-control"
+                       id="yearsOfExperience"
+                       name="yearsOfExperience"
+                       [(ngModel)]="newNanny.yearsOfExperience">
+              </div>
+
+              <div class="form-group">
+                <label for="kidsAges">kids Ages</label>
+                <input type="checkbox" id="kidsAges" value="0-2" name="kidsAges"
+                [(ngModel)]="newNanny.kidsAges"> 0-2 Years<br>      
+          <input type="checkbox" id="kidsAges" value="2-4" name="kidsAges"
+          [(ngModel)]="newNanny.kidsAges"> 2-3 Years  <br>      
+          <input type="checkbox" id="kidsAges" value="4-6" name="kidsAges"
+          [(ngModel)]="newNanny.kidsAges">4-6 Years<br> 
+              </div>
+
+              <div class="form-group">
+                <label for="referenceName">reference Name</label>
+                <input type="text"
+                       class="form-control"
+                       id="referenceName"
+                       name="referenceName"
+                       [(ngModel)]="newNanny.referenceName">
+              </div>
+
+              <div class="form-group">
+                <label for="referenceNumber">reference Number</label>
+                <input type="text"
+                       class="form-control"
+                       id="referenceNumber"
+                       name="referenceNumber"
+                       [(ngModel)]="newNanny.referenceNumber">
+              </div>
+
+            <button (click)="createNanny()" type="button" >Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6 ml-auto">
+          <div class="image-container">
+            <h2 class="catchphrase">Hundreds of awesome places in reach of few clicks.</h2>
+            <img src="assets/images/create-rental.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+
+  
